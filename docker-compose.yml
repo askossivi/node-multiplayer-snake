@@ -1,7 +1,7 @@
 version: '2'
 services:
   snake:
-    image: 'devtraining/devsecops'
+    image: 'devtraining/snake'
     environment:
       - "PORT:3000"
     ports:
