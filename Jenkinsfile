@@ -21,7 +21,6 @@ node ('Ubuntu-AppServer-agent'){
     
          sh "docker-compose down"
          sh "docker-compose up -d"
-     docker pull devtraining/snake
         
       }
 }
