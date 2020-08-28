@@ -14,8 +14,9 @@ node ('Ubuntu-AppServer-agent'){
     
      docker.withRegistry('https://registry.hub.docker.com', 'GitHub UserName') {
             app.push("latest")
+                                }
+        
          }
-    
     stage('Pull-image-server') {
     
          sh "docker-compose down"
