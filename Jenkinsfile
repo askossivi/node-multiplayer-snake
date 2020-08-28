@@ -12,7 +12,7 @@ node ('Ubuntu-AppServer-agent'){
     }
     stage('Post-to-dockerhub') {
     
-     docker.withRegistry('https://registry.hub.docker.com', 'Docker_Hub') {
+     docker.withRegistry('https://registry.hub.docker.com', 'GitHub UserName') {
             app.push("latest")
                                 }
         
