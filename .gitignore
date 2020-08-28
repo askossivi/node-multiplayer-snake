@@ -56,3 +56,4 @@ npm-debug.log
 
 #backup yml file
 docker-compose.yml.backup
+Jenkinsfile.backup

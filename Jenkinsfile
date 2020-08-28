@@ -8,19 +8,19 @@ node ('Ubuntu-AppServer-agent'){
     stage('Build-and-Tag') {
     /* This builds the actual image; synonymous to
          * docker build on the command line */
-        app = docker.build("devtraining/snake")
+        app = docker.build("devtraining/snake:askoss")
     }
     stage('Post-to-dockerhub') {
     
-     docker.withRegistry('https://registry.hub.docker.com', 'GitHub UserName') {
-            app.push("latest")
+     docker.withRegistry('https://registry.hub.docker.com', 'Docker_Hub') {
+            app.push("askoss")
                                 }
         
          }
     stage('Pull-image-server') {
     
          sh "docker-compose down"
-         sh "docker-compose up -d"	
+         sh "docker-compose up -d"
       }
-}
+ } 
 
