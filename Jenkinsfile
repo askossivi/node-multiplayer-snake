@@ -13,7 +13,11 @@ node ('Ubuntu-AppServer-agent'){
     stage('Post-to-dockerhub') {
     
      docker.withRegistry('https://registry.hub.docker.com', 'Docker_Hub') {
+<<<<<<< HEAD
             app.push("askoss")
+=======
+            app.push("latest")
+>>>>>>> 4b1873979f14979a61fdaa48b6f99b08b36bb30b
                                 }
         
          }
@@ -21,6 +25,10 @@ node ('Ubuntu-AppServer-agent'){
     
          sh "docker-compose down"
          sh "docker-compose up -d"
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 4b1873979f14979a61fdaa48b6f99b08b36bb30b
       }
  } 
 
